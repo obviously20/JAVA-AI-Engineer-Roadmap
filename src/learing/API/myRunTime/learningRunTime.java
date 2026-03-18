@@ -15,7 +15,7 @@ public class learningRunTime {
             public Process exec(string command) 运行cmd命令
         */
 
-//        //获得当前系统的运行环境对象
+//        //获得当前系统的运行环境对象,private修饰构造方法，不能直接new 对象，且其中的方法是静态static修饰-->直接用类名调用方法
 //        Runtime r1 = Runtime.getRuntime();
 //        Runtime r2 = Runtime.getRuntime();
 //        System.out.println(r1==r2);
