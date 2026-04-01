@@ -1,8 +1,10 @@
 package learing.advancedSets.Set;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private String name;
     private int age;
 
@@ -63,5 +65,16 @@ public class Student {
     @Override
     public int hashCode() {
         return Objects.hash(name, age);
+    }
+
+    // 按年龄排序
+    @Override
+    public int compareTo(@NotNull Student o) {
+        System.out.println("this:" + this);
+        System.out.println("o:" + o);
+        System.out.println("---------------");
+        return this.age - o.age;
+        //假如当前的年龄小于o的年龄，返回负数，就排在o的左边，但o的左边又有其他元素，那就会继续调用compareTo方法，直到找到this适合的位置
+        //元素添加是根据红黑树的规则，将元素插入到树中（插入时会根据红黑树的规则，调整树的结构，保持树的平衡）
     }
 }
