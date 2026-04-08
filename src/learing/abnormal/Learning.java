@@ -214,5 +214,13 @@ public class Learning {
             }
         }
         return max;
+
+
+        //todo
+        // try{}catch{}finally{}:异常处理机制
+        // try： try 语句块中可能会抛出异常的代码
+        // catch： catch 语句块中用于捕获异常的代码
+        // finally： finally 语句块中用于释放资源的代码,无论是否有异常," 都会执行 ",除了System.exit(0)虚拟机退出以外
+
     }
 }
